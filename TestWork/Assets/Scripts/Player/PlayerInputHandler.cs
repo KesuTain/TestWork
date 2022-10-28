@@ -16,7 +16,7 @@ namespace TW.PlayerSystem.Handler
         {
             _nodeController ??= FindObjectOfType<NodeController>();
 
-            _nodeController.OnGetNodes += SubscribeNodes;
+            SubscribeNodes(_nodeController.GetExistNodes());
         }
 
         private void SubscribeNodes(List<Node> nodes)
